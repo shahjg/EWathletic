@@ -1,0 +1,348 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title id="pageTitle">Sport - EW Athletics</title>
+<meta name="description" content="Custom sports apparel by EW Athletics.">
+<link rel="icon" type="image/png" href="images/logo-black.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/master.css"><link rel="stylesheet" href="css/pages.css">
+<style>
+/* Sport page specific styles */
+.sport-hero{background:var(--dark);color:#fff;padding:5rem 0 4rem;text-align:center;position:relative;overflow:hidden}
+.sport-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(34,197,94,.1) 0%,transparent 60%)}
+.sport-emoji-big{font-size:4rem;margin-bottom:1rem;display:block;position:relative}
+@media(min-width:768px){.sport-emoji-big{font-size:5.5rem}}
+.sport-hero h1{font-size:clamp(2rem,5vw,3.5rem);font-weight:900;letter-spacing:2px;position:relative}
+.sport-hero .tagline{font-size:clamp(.95rem,2vw,1.2rem);color:rgba(255,255,255,.55);margin-top:.6rem;position:relative;max-width:550px;margin-left:auto;margin-right:auto;line-height:1.6}
+.sport-hero .hero-btns{display:flex;gap:.75rem;justify-content:center;margin-top:2rem;flex-wrap:wrap;position:relative}
+
+/* Products we make */
+.products-sec{padding:60px 0;background:#fff}
+@media(min-width:768px){.products-sec{padding:80px 0}}
+.prod-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+@media(min-width:600px){.prod-grid{grid-template-columns:repeat(3,1fr)}}
+@media(min-width:900px){.prod-grid{grid-template-columns:repeat(4,1fr)}}
+.prod-card{background:var(--light-bg);border-radius:12px;padding:2rem 1.25rem;text-align:center;transition:all .3s var(--ease);border:2px solid transparent;cursor:pointer}
+.prod-card:hover{border-color:var(--green);transform:translateY(-4px);box-shadow:0 8px 25px rgba(22,163,74,.08)}
+.prod-icon{font-size:2.5rem;margin-bottom:.75rem}
+.prod-card h3{font-size:.95rem;font-weight:800;margin-bottom:.3rem}
+.prod-card p{font-size:.8rem;color:var(--text-muted);line-height:1.4}
+
+/* Our work for this sport */
+.sport-work{padding:60px 0;background:var(--light-bg)}
+@media(min-width:768px){.sport-work{padding:80px 0}}
+.work-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+@media(min-width:768px){.work-grid{grid-template-columns:repeat(3,1fr);gap:1.25rem}}
+.work-item{position:relative;aspect-ratio:1;border-radius:12px;overflow:hidden;background:#e5e5e5}
+.work-item img{width:100%;height:100%;object-fit:cover;transition:transform .5s var(--ease)}
+.work-item:hover img{transform:scale(1.05)}
+.work-ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.7) 0%,transparent 50%);display:flex;align-items:flex-end;padding:1.25rem;opacity:0;transition:opacity .3s}
+.work-item:hover .work-ov{opacity:1}
+.work-ov strong{color:#fff;font-size:.9rem;display:block}
+.work-ov span{color:rgba(255,255,255,.6);font-size:.75rem}
+
+/* No photos placeholder */
+.no-photos{text-align:center;padding:3rem 2rem;color:var(--text-muted)}
+.no-photos p{font-size:1rem;margin-bottom:1rem}
+
+/* Features */
+.sport-features{padding:60px 0;background:#fff}
+@media(min-width:768px){.sport-features{padding:80px 0}}
+.feat-row{display:grid;grid-template-columns:1fr;gap:1.5rem}
+@media(min-width:768px){.feat-row{grid-template-columns:1fr 1fr 1fr}}
+.feat-card{padding:2rem;border:1px solid var(--border);border-radius:12px;text-align:center;transition:all .3s}
+.feat-card:hover{border-color:var(--green);box-shadow:0 4px 20px rgba(22,163,74,.06)}
+.feat-card svg{width:32px;height:32px;stroke:var(--green);stroke-width:2;fill:none;margin-bottom:1rem}
+.feat-card h3{font-size:1rem;font-weight:800;margin-bottom:.4rem}
+.feat-card p{font-size:.88rem;color:var(--text2);line-height:1.5}
+
+/* Final CTA */
+.sport-cta{padding:70px 0;background:var(--dark);color:#fff;text-align:center}
+.sport-cta h2{font-size:clamp(1.6rem,3.5vw,2.5rem);font-weight:900;margin-bottom:.6rem}
+.sport-cta p{font-size:1.05rem;color:rgba(255,255,255,.55);margin-bottom:2rem;max-width:500px;margin-left:auto;margin-right:auto}
+</style>
+</head><body>
+<header class="hdr" id="hdr"><div class="hdr-inner">
+<div class="hdr-left"><button class="hamburger" id="ham" aria-label="Menu"><span></span><span></span><span></span></button>
+<nav class="hdr-nav">
+<div class="nav-item has-dropdown"><a href="#" class="nav-link">Sports</a><div class="mega-dd"><div class="dd-grid">
+<div><a href="sport.html?s=soccer" class="dd-link">⚽ Soccer</a><a href="sport.html?s=basketball" class="dd-link">🏀 Basketball</a><a href="sport.html?s=cricket" class="dd-link">🏏 Cricket</a><a href="sport.html?s=football" class="dd-link">🏈 Football</a><a href="sport.html?s=volleyball" class="dd-link">🏐 Volleyball</a></div>
+<div><a href="sport.html?s=baseball" class="dd-link">⚾ Baseball</a><a href="sport.html?s=other" class="dd-link">🥊 Boxing / MMA</a><a href="sport.html?s=other" class="dd-link">🏒 Hockey</a><a href="sport.html?s=other" class="dd-link">🎾 Tennis</a><a href="sport.html?s=other" class="dd-link">🎯 Others</a></div>
+</div></div></div>
+<div class="nav-item has-dropdown"><a href="#" class="nav-link">Apparel</a><div class="mega-dd"><div class="dd-grid">
+<div><a href="sport.html?s=apparel" class="dd-link">👕 Hoodies & Sweaters</a><a href="sport.html?s=apparel" class="dd-link">👔 Polo Shirts</a><a href="sport.html?s=apparel" class="dd-link">🧥 Jackets</a></div>
+<div><a href="sport.html?s=apparel" class="dd-link">🩺 Scrubs & Lab Coats</a><a href="sport.html?s=apparel" class="dd-link">👟 Track Suits</a><a href="sport.html?s=apparel" class="dd-link">🎽 Custom T-Shirts</a></div>
+</div></div></div>
+<div class="nav-item"><a href="gallery.html" class="nav-link">Our Work</a></div>
+<div class="nav-item"><a href="process.html" class="nav-link">Our Process</a></div>
+</nav></div>
+<div class="hdr-center"><a href="/" class="hdr-logo"><img src="images/logo-black.png" alt="EW Athletics"></a></div>
+<div class="hdr-right">
+<nav class="hdr-nav hdr-nav-right">
+<div class="nav-item"><a href="reviews.html" class="nav-link">Reviews</a></div>
+<div class="nav-item"><a href="about.html" class="nav-link">About</a></div>
+<div class="nav-item"><a href="contact.html" class="nav-link">Contact</a></div>
+</nav>
+<button class="search-btn" id="searchBtn" aria-label="Search"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></button><a href="quote.html" class="hdr-cta">GET QUOTE</a></div>
+</div>
+<div class="mob-menu" id="mob"><div>
+<a href="gallery.html" class="mob-link">Our Work</a>
+<a href="quote.html" class="mob-link">Custom Orders</a>
+<a href="process.html" class="mob-link">Our Process</a>
+<a href="reviews.html" class="mob-link">Reviews</a>
+<a href="about.html" class="mob-link">About</a>
+<a href="contact.html" class="mob-link">Contact</a>
+<div style="padding:1rem 0 .5rem;font-size:.75rem;font-weight:700;color:#999;letter-spacing:1px;text-transform:uppercase">Sports</div>
+<a href="sport.html?s=soccer" class="mob-link" style="font-size:.95rem">⚽ Soccer</a>
+<a href="sport.html?s=basketball" class="mob-link" style="font-size:.95rem">🏀 Basketball</a>
+<a href="sport.html?s=cricket" class="mob-link" style="font-size:.95rem">🏏 Cricket</a>
+<a href="sport.html?s=football" class="mob-link" style="font-size:.95rem">🏈 Football</a>
+<a href="sport.html?s=volleyball" class="mob-link" style="font-size:.95rem">🏐 Volleyball</a>
+<a href="sport.html?s=baseball" class="mob-link" style="font-size:.95rem">⚾ Baseball</a>
+<a href="sport.html?s=other" class="mob-link" style="font-size:.95rem">🥊 Boxing / MMA</a>
+<a href="sport.html?s=other" class="mob-link" style="font-size:.95rem">🏒 Hockey</a>
+<a href="sport.html?s=other" class="mob-link" style="font-size:.95rem">🎯 Others</a>
+<div style="padding:1rem 0 .5rem;font-size:.75rem;font-weight:700;color:#999;letter-spacing:1px;text-transform:uppercase">Apparel</div>
+<a href="sport.html?s=apparel" class="mob-link" style="font-size:.95rem">👕 Hoodies & Sweaters</a>
+<a href="sport.html?s=apparel" class="mob-link" style="font-size:.95rem">🩺 Scrubs & Lab Coats</a>
+<a href="sport.html?s=apparel" class="mob-link" style="font-size:.95rem">🎽 Custom T-Shirts</a>
+<a href="quote.html" class="mob-cta">GET QUOTE</a>
+</div></div></header><div class="search-overlay" id="searchOv"><button class="search-close" id="searchClose">&times;</button><div class="search-inner"><div class="search-input-wrap"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg><input type="text" placeholder="Search EW Athletics..."></div><div class="search-links"><a href="quote.html">⚽ Soccer</a><a href="quote.html">🏀 Basketball</a><a href="quote.html">🏏 Cricket</a><a href="quote.html">🏈 Football</a><a href="quote.html">🏐 Volleyball</a><a href="quote.html">🩺 Scrubs</a><a href="quote.html">👕 Apparel</a><a href="gallery.html">Our Work</a><a href="process.html">Our Process</a><a href="contact.html">Contact</a></div></div></div>
+
+<main class="page-wrapper">
+<section class="sport-hero">
+<div class="container">
+<span class="sport-emoji-big" id="sportEmoji"></span>
+<h1 id="sportTitle"></h1>
+<p class="tagline" id="sportTagline"></p>
+<div class="hero-btns">
+<a href="" class="btn-primary" id="ctaQuote">Start Your Project</a>
+<a href="gallery.html" class="btn-secondary">See All Our Work</a>
+</div>
+</div>
+</section>
+
+<section class="products-sec">
+<div class="container">
+<div class="sh reveal"><h2>What We Make</h2><p id="prodSubtitle">Everything your team needs</p></div>
+<div class="prod-grid" id="prodGrid"></div>
+</div>
+</section>
+
+<section class="sport-work" id="workSection">
+<div class="container">
+<div class="sh reveal"><h2 id="workTitle">Our Work</h2><p>Real products we have manufactured</p></div>
+<div class="work-grid" id="workGrid"></div>
+</div>
+</section>
+
+<section class="sport-features">
+<div class="container">
+<div class="sh reveal"><h2>Why EW Athletics</h2><p>What makes us different</p></div>
+<div class="feat-row">
+<div class="feat-card reveal"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg><h3>Direct Manufacturing</h3><p>No middlemen. We own the process from design to delivery — better pricing, faster turnaround.</p></div>
+<div class="feat-card reveal"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg><h3>Quality Guaranteed</h3><p>10+ expert tailors, premium materials, and a video call review before anything ships.</p></div>
+<div class="feat-card reveal"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><h3>White Glove Service</h3><p>Emails, calls, texts, video calls — constant communication. You are never left in the dark.</p></div>
+</div>
+</div>
+</section>
+
+<section class="sport-cta">
+<div class="container">
+<h2 id="ctaTitle">Ready to Build Your Kit?</h2>
+<p id="ctaDesc">Get a free quote within 24 hours. No minimums on consultations.</p>
+<div class="hero-btns">
+<a href="" class="btn-primary" id="ctaQuote2">Get a Free Quote</a>
+<a href="mailto:info@ewathletics.com" class="btn-secondary">Email Us Instead</a>
+</div>
+</div>
+</section>
+</main>
+
+<a href="https://wa.me/1XXXXXXXXXX" target="_blank" class="wa-btn" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.612.637l4.573-1.2A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.24 0-4.307-.724-5.99-1.952l-.418-.312-3.28.86.876-3.2-.343-.546A9.936 9.936 0 012 12C2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/></svg></a><footer class="ftr"><div class="container"><div class="ftr-grid">
+<div><img src="images/logo-white.png" alt="EW Athletics" class="ftr-logo"><p class="ftr-tagline">Elite Custom Sports Manufacturing</p><div class="social-row"><a href="#" class="soc soc-ig"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a><a href="#" class="soc soc-tt"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 00-.79-.05A6.34 6.34 0 003.15 15.2a6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.34-6.34V8.73a8.19 8.19 0 004.76 1.52v-3.4a4.85 4.85 0 01-1-.16z"/></svg></a><a href="#" class="soc soc-fb"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a><a href="#" class="soc soc-yt"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a></div></div>
+<div><h4 class="ftr-heading">Navigate</h4><ul class="ftr-links"><li><a href="gallery.html">Our Work</a></li><li><a href="process.html">Our Process</a></li><li><a href="reviews.html">Reviews</a></li><li><a href="about.html">About Us</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+<div><h4 class="ftr-heading">Sports</h4><ul class="ftr-links"><li><a href="quote.html">Soccer</a></li><li><a href="quote.html">Basketball</a></li><li><a href="quote.html">Cricket</a></li><li><a href="quote.html">Scrubs</a></li><li><a href="quote.html">Apparel</a></li></ul></div>
+<div><h4 class="ftr-heading">Get Started</h4><ul class="ftr-links"><li><a href="quote.html">Request a Quote</a></li><li><a href="contact.html">FAQs</a></li><li><a href="contact.html">Email Us</a></li></ul></div>
+</div></div><div class="ftr-bottom"><div class="container"><div class="ftr-bottom-inner"><p>&copy; 2025 EW Athletics. All rights reserved.</p><div class="ftr-legal"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a></div></div></div></div></footer>
+<script src="js/main.js"></script>
+<script>
+(function(){
+var sports = {
+  soccer: {
+    emoji: '⚽', title: 'SOCCER', tagline: 'Custom jerseys, shorts, goalkeeper kits, and full team packages — designed and manufactured to your exact specifications.',
+    products: [
+      {icon:'👕',name:'Jerseys',desc:'Home, away & third kits'},
+      {icon:'🩳',name:'Shorts',desc:'Match & training shorts'},
+      {icon:'🧤',name:'Goalkeeper Kits',desc:'Full GK sets'},
+      {icon:'📦',name:'Full Team Kits',desc:'Jersey + shorts + socks'},
+      {icon:'🏃',name:'Training Wear',desc:'Practice jerseys & bibs'},
+      {icon:'🧥',name:'Warm-ups',desc:'Track jackets & pants'},
+      {icon:'🧦',name:'Socks',desc:'Custom team socks'},
+      {icon:'🎽',name:'Custom',desc:'Anything you need'}
+    ],
+    work: [
+      {img:'images/alwahda-render.jpg',title:'Al-Wahda FC',desc:'White Jersey — Render'},
+      {img:'images/alwahda-white-jersey.jpg',title:'Al-Wahda FC',desc:'White/Gold Long Sleeve'},
+      {img:'images/alwahda-black-jersey.jpg',title:'Al-Wahda FC',desc:'Black/Gold Long Sleeve'}
+    ],
+    ctaTitle: 'Ready to Kit Out Your Team?',
+    ctaDesc: 'From local leagues to international clubs — we build soccer kits for teams of all sizes.'
+  },
+  basketball: {
+    emoji: '🏀', title: 'BASKETBALL', tagline: 'Breathable, lightweight basketball uniforms built for performance — jerseys, shorts, warm-ups, and complete team packages.',
+    products: [
+      {icon:'👕',name:'Jerseys',desc:'Reversible & single-layer'},
+      {icon:'🩳',name:'Shorts',desc:'Game & practice shorts'},
+      {icon:'📦',name:'Full Kits',desc:'Jersey + shorts combo'},
+      {icon:'🧥',name:'Warm-ups',desc:'Shooting shirts & jackets'},
+      {icon:'🏃',name:'Practice Gear',desc:'Training wear'},
+      {icon:'🎽',name:'Custom',desc:'Anything you need'}
+    ],
+    work: [
+      {img:'images/selkirk-basketball.jpg',title:'Selkirk',desc:'Basketball Kit — Blue/Gold'}
+    ],
+    ctaTitle: 'Ready to Hit the Court?',
+    ctaDesc: 'Custom basketball uniforms for rec leagues, school teams, and competitive clubs.'
+  },
+  cricket: {
+    emoji: '🏏', title: 'CRICKET', tagline: 'Premium cricket whites, coloured kits, training wear, and sweaters — crafted for comfort and performance on the pitch.',
+    products: [
+      {icon:'👕',name:'Whites',desc:'Traditional cricket whites'},
+      {icon:'🎨',name:'Coloured Kits',desc:'T20 & ODI style'},
+      {icon:'🩳',name:'Trousers',desc:'Match & practice trousers'},
+      {icon:'🧥',name:'Sweaters',desc:'V-neck cricket sweaters'},
+      {icon:'🏃',name:'Training Wear',desc:'Nets & practice gear'},
+      {icon:'🎽',name:'Custom',desc:'Anything you need'}
+    ],
+    work: [],
+    ctaTitle: 'Ready to Pad Up?',
+    ctaDesc: 'Custom cricket gear for clubs, academies, and national teams.'
+  },
+  football: {
+    emoji: '🏈', title: 'FOOTBALL', tagline: 'Durable custom football jerseys, pants, and practice gear — built tough for the gridiron.',
+    products: [
+      {icon:'👕',name:'Jerseys',desc:'Game day jerseys'},
+      {icon:'🩳',name:'Pants',desc:'Game & practice pants'},
+      {icon:'📦',name:'Full Kits',desc:'Complete uniform sets'},
+      {icon:'🏃',name:'Practice Jerseys',desc:'Lightweight practice wear'},
+      {icon:'🧥',name:'Warm-ups',desc:'Sideline jackets & gear'},
+      {icon:'🎽',name:'Custom',desc:'Anything you need'}
+    ],
+    work: [],
+    ctaTitle: 'Ready to Suit Up?',
+    ctaDesc: 'Custom football gear from pee-wee to semi-pro.'
+  },
+  volleyball: {
+    emoji: '🏐', title: 'VOLLEYBALL', tagline: 'Lightweight, breathable volleyball uniforms designed for movement and performance at the net.',
+    products: [
+      {icon:'👕',name:'Jerseys',desc:'Sleeveless & short sleeve'},
+      {icon:'🩳',name:'Shorts',desc:'Spandex & standard'},
+      {icon:'📦',name:'Full Kits',desc:'Jersey + shorts combo'},
+      {icon:'🧥',name:'Warm-ups',desc:'Track suits & jackets'},
+      {icon:'🏃',name:'Libero Kits',desc:'Contrast colour sets'},
+      {icon:'🎽',name:'Custom',desc:'Anything you need'}
+    ],
+    work: [],
+    ctaTitle: 'Ready to Dominate the Net?',
+    ctaDesc: 'Custom volleyball gear for beach, indoor, and competitive teams.'
+  },
+  baseball: {
+    emoji: '⚾', title: 'BASEBALL', tagline: 'Classic baseball jerseys, pants, and caps — button-down or pullover, fully customized for your team.',
+    products: [
+      {icon:'👕',name:'Jerseys',desc:'Button-down & pullover'},
+      {icon:'🩳',name:'Pants',desc:'Full length & knicker'},
+      {icon:'📦',name:'Full Kits',desc:'Jersey + pants combo'},
+      {icon:'🧢',name:'Caps',desc:'Fitted & adjustable'},
+      {icon:'🧥',name:'Warm-ups',desc:'Batting jackets'},
+      {icon:'🎽',name:'Custom',desc:'Anything you need'}
+    ],
+    work: [],
+    ctaTitle: 'Ready to Step Up to the Plate?',
+    ctaDesc: 'Custom baseball uniforms for little league to adult rec.'
+  },
+  apparel: {
+    emoji: '👕', title: 'APPAREL', tagline: 'Beyond sports — custom hoodies, scrubs, track suits, polo shirts, jackets, and more for teams, businesses, and organizations.',
+    products: [
+      {icon:'🧥',name:'Hoodies & Sweaters',desc:'Pullover & zip-up'},
+      {icon:'🩺',name:'Scrubs',desc:'Tops, bottoms & full sets'},
+      {icon:'👟',name:'Track Suits',desc:'Matching jacket & pants'},
+      {icon:'👔',name:'Polo Shirts',desc:'Embroidered & printed'},
+      {icon:'🧥',name:'Jackets',desc:'Bomber, coach & varsity'},
+      {icon:'🎽',name:'T-Shirts',desc:'Custom printed tees'},
+      {icon:'🥼',name:'Lab Coats',desc:'Medical & professional'},
+      {icon:'📦',name:'Custom',desc:'Anything you need'}
+    ],
+    work: [
+      {img:'images/scrubs-blue-top.png',title:'Medical Scrubs',desc:'Blue Collection'},
+      {img:'images/scrubs-black-top.png',title:'Medical Scrubs',desc:'Black Collection'},
+      {img:'images/scrubs-grey-top.png',title:'Medical Scrubs',desc:'Grey Collection'}
+    ],
+    ctaTitle: 'Ready to Get Started?',
+    ctaDesc: 'Custom apparel for any organization — sports teams, businesses, medical, and more.'
+  },
+  other: {
+    emoji: '🎯', title: 'OTHER SPORTS', tagline: 'Hockey, boxing, MMA, tennis, rugby, lacrosse, esports — whatever your sport, we can build custom gear for it.',
+    products: [
+      {icon:'🥊',name:'Boxing / MMA',desc:'Fight shorts, rash guards'},
+      {icon:'🏒',name:'Hockey',desc:'Practice jerseys & socks'},
+      {icon:'🎾',name:'Tennis',desc:'Polos, skirts & shorts'},
+      {icon:'🏉',name:'Rugby',desc:'Jerseys & shorts'},
+      {icon:'🥍',name:'Lacrosse',desc:'Jerseys & shorts'},
+      {icon:'🎮',name:'Esports',desc:'Team jerseys & hoodies'},
+      {icon:'🤼',name:'Wrestling',desc:'Singlets & warm-ups'},
+      {icon:'📦',name:'Custom',desc:'Tell us what you need'}
+    ],
+    work: [],
+    ctaTitle: 'Don't See Your Sport?',
+    ctaDesc: 'We manufacture custom gear for any sport. Tell us what you need.'
+  }
+};
+
+var params = new URLSearchParams(window.location.search);
+var key = params.get('s') || 'soccer';
+var s = sports[key] || sports.soccer;
+
+document.getElementById('pageTitle').textContent = s.title + ' - EW Athletics';
+document.getElementById('sportEmoji').textContent = s.emoji;
+document.getElementById('sportTitle').textContent = s.title;
+document.getElementById('sportTagline').textContent = s.tagline;
+document.getElementById('ctaQuote').href = 'quote.html?sport=' + key;
+document.getElementById('ctaQuote2').href = 'quote.html?sport=' + key;
+document.getElementById('ctaTitle').textContent = s.ctaTitle;
+document.getElementById('ctaDesc').textContent = s.ctaDesc;
+document.getElementById('prodSubtitle').textContent = 'Everything your ' + (key === 'apparel' ? 'organization' : 'team') + ' needs';
+
+// Products
+var pg = document.getElementById('prodGrid');
+s.products.forEach(function(p){
+  var d = document.createElement('a');
+  d.href = 'quote.html?sport=' + key;
+  d.className = 'prod-card reveal';
+  d.innerHTML = '<div class="prod-icon">' + p.icon + '</div><h3>' + p.name + '</h3><p>' + p.desc + '</p>';
+  pg.appendChild(d);
+});
+
+// Work
+var wg = document.getElementById('workGrid');
+var ws = document.getElementById('workSection');
+if (s.work.length === 0) {
+  ws.innerHTML = '<div class="container"><div class="sh"><h2>Our Work</h2></div><div class="no-photos"><p>We are building our ' + s.title.toLowerCase() + ' portfolio — photos coming soon.</p><a href="gallery.html" class="btn-outline">View All Our Work \u2192</a></div></div>';
+} else {
+  s.work.forEach(function(w){
+    var d = document.createElement('div');
+    d.className = 'work-item reveal';
+    d.innerHTML = '<img src="' + w.img + '" alt="' + w.title + '"><div class="work-ov"><strong>' + w.title + '</strong><span>' + w.desc + '</span></div>';
+    wg.appendChild(d);
+  });
+}
+
+// Trigger reveal
+setTimeout(function(){
+  document.querySelectorAll('.reveal').forEach(function(el){
+    var obs = new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});},{threshold:.15});
+    obs.observe(el);
+  });
+},100);
+})();
+</script>
+</body></html>
