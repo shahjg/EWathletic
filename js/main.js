@@ -29,25 +29,16 @@ document.addEventListener('DOMContentLoaded', function() {
     // --- SCROLL REVEAL ---
     var reveals = document.querySelectorAll('.reveal');
     if (reveals.length) {
+        reveals.forEach(function(el) { el.classList.add('hidden'); });
         var obs = new IntersectionObserver(function(entries) {
-            entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
-        }, { threshold: 0.15 });
+            entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('visible'); e.target.classList.remove('hidden'); obs.unobserve(e.target); } });
+        }, { threshold: 0.08 });
         reveals.forEach(function(el) { obs.observe(el); });
     }
 
     // --- PARTICLES ---
     var pc = document.getElementById('particles');
-    if (pc) { for (var i = 0; i < 20; i++) { var d = document.createElement('div'); d.className = 'p'; d.style.top = ((i * 1.5 + 10) % 80 + 10) + '%'; d.style.left = ((i * 3.2 + 5) % 90 + 5) + '%'; d.style.animationDelay = (i * .15) + 's'; d.style.animationDuration = (i * .8 + 20) + 's'; pc.appendChild(d); } }
-
-    // --- DYNAMIC SUBTITLE ---
-    var sub = document.getElementById('dynSub');
-    if (sub) {
-        var def = sub.textContent;
-        document.querySelectorAll('.lt').forEach(function(l) {
-            l.addEventListener('mouseenter', function() { sub.textContent = 'Explore ' + (this.querySelector('.lt-name').textContent.trim()) + ' Collection'; });
-            l.addEventListener('mouseleave', function() { sub.textContent = def; });
-        });
-    }
+    if (pc) { for (var i = 0; i < 35; i++) { var d = document.createElement('div'); d.className = 'p'; d.style.top = ((i * 2.3 + 8) % 85 + 8) + '%'; d.style.left = ((i * 2.7 + 3) % 92 + 4) + '%'; d.style.animationDelay = (i * .2) + 's'; d.style.animationDuration = (i * .6 + 22) + 's'; pc.appendChild(d); } }
 
     // --- FAQ ---
     document.querySelectorAll('.faq-q').forEach(function(btn) {
